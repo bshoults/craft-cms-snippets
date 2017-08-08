@@ -1,0 +1,67 @@
+[
+    {
+        "name": "SEO Description",
+        "handle": "seoDescription",
+        "instructions": "",
+        "required": false,
+        "translatable": 0,
+        "type": "PlainText",
+        "settings": {
+            "placeholder": "",
+            "maxLength": 160,
+            "multiline": 1,
+            "initialRows": 2
+        }
+    },
+    {
+        "name": "SEO Image",
+        "handle": "seoImage",
+        "instructions": "Image should be 1200x670. This image is shown when sharing a page on Facebook and Twitter.",
+        "required": false,
+        "translatable": 0,
+        "type": "Assets",
+        "settings": {
+            "useSingleFolder": 1,
+            "sources": "*",
+            "defaultUploadLocationSource": 1,
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": 4,
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": 1,
+            "allowedKinds": [
+                "image"
+            ],
+            "limit": 1,
+            "viewMode": "large",
+            "selectionLabel": ""
+        }
+    },
+    {
+        "name": "SEO Image Alt Text",
+        "handle": "seoImageAltText",
+        "instructions": "Alt text for images. This is recommended for Twitter.",
+        "required": false,
+        "translatable": 0,
+        "type": "PlainText",
+        "settings": {
+            "placeholder": "",
+            "maxLength": "",
+            "multiline": 1,
+            "initialRows": 2
+        }
+    },
+    {
+        "name": "SEO Title",
+        "handle": "seoTitle",
+        "instructions": "Optional title field for SEO purposes",
+        "required": false,
+        "translatable": 0,
+        "type": "PlainText",
+        "settings": {
+            "placeholder": "",
+            "maxLength": 50,
+            "multiline": "",
+            "initialRows": 4
+        }
+    }
+]
