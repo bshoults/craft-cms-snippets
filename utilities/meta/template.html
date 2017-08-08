@@ -1,0 +1,14 @@
+<!-- Meta Title -->
+<title>{% if entry is defined %}{% if entry.seoTitle %}{{ entry.seoTitle }} - {% else %}{{ entry.title }} - {% endif %}{% endif %}{{ siteName }}</title>
+<meta property="og:title" content="{% if entry is defined %}{% if entry.seoTitle %}{{ entry.seoTitle }} - {% else %}{{ entry.title }} - {% endif %}{% endif %}{{ siteName }}">
+
+<!-- Meta Description -->
+<meta name="description" content="{% if entry is defined %}{% if entry.seoDescription %}{{ entry.seoDescription }}{% else %}{{ globalSeo.seoDescription }}{% endif %}{% endif %}">
+<meta property="og:description" content="{% if entry is defined %}{% if entry.seoDescription %}{{ entry.seoDescription }}{% else %}{{ globalSeo.seoDescription }}{% endif %}{% endif %}">
+
+<!-- Meta Image, etc. -->
+<meta property="og:image" content="{% if entry.seoImage|length %}{% for asset in entry.seoImage %}{{ asset.url }}{% endfor %}{% else %}{% for asset in globalSeo.seoImage %}{{ asset.url }}{% endfor %}{% endif %}">
+<meta name="twitter:image:alt" content="{% if entry.seoImage|length %}{{ entry.seoImageAltText }}{% else %}{{ globalSeo.seoImageAltText }}{% endif %}">
+<meta property="og:url" content="{{ entry.url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="{{ siteName }}">
